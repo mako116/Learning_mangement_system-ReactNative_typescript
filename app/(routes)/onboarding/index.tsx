@@ -1,5 +1,6 @@
-import Onboardinscreen from "@/screens/onboarding/onboardinscreen";
+import Onboardinscreen from "@/screens/onboarding/Onboardinscreen";
 
+ 
  
 export default function OnBoarding() {
   return (

@@ -9,34 +9,23 @@ import { useColorScheme } from '@/hooks/useColorScheme';
 import { View } from 'react-native';
 import OnBoarding from './(routes)/onboarding';
 
-// Prevent the splash screen from auto-hiding before asset loading is complete.
-SplashScreen.preventAutoHideAsync();
-
 export default function RootLayout() {
-   // const [loaded] = useFonts({
-  //   SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  // });
-
-  // useEffect(() => {
-  //   if (loaded) {
-  //     SplashScreen.hideAsync();
-  //   }
-  // }, [loaded]);
-
-  // if (!loaded) {
-  //   return null;
-  // }
+   
 
   const [isLoggedIn, setIsLoggedIn]=useState(false)
 
 
   return (
       <>
-      {isLoggedIn ?(
+       {isLoggedIn ?(
         <View>
           </View>
       ):(
-        <OnBoarding/>
+        <Stack screenOptions={{headerShown:false}}>
+          <Stack.Screen name='index'/>
+          <Stack.Screen name='(routes)/Welcome-intro/index'/>
+          <Stack.Screen name='(routes)/login/index'/>
+        </Stack>
       )}
      </>
    );
