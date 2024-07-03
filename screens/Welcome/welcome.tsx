@@ -16,8 +16,7 @@ import { commonstyles } from '@/styles/common/common.style'
 export default function WelcomeIntroScreen() {
 
   
-    const Onboardinscreen = () => {
-        let [fontsLoaded,fontError] = useFonts({
+         let [fontsLoaded,fontError] = useFonts({
           Raleway_700Bold,
           Nunito_400Regular,
           Nunito_700Bold,
@@ -27,7 +26,7 @@ export default function WelcomeIntroScreen() {
     if(!fontsLoaded && !fontError){
       return null;
     } 
-    }
+    
     
     const renderItem = ({item}:{item:onboardingSwiperDataType}) => (
       <LinearGradient colors={["#e5ecf9", "#f6f7f9", "#e8eef9"]}
